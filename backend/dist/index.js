@@ -1,5 +1,7 @@
 import express from "express";
-const PORT = 5000;
 const app = express();
-app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`));
+// middlewares
+app.use(express.json());
+//connections and listeners
+app.listen(5000, () => console.log(`Server is running on Port ${5000}`));
 //# sourceMappingURL=index.js.map

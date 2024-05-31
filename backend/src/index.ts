@@ -1,12 +1,11 @@
 import express from "express";
+import { config } from "dotenv";
+config();
 
 const app = express();
 
-// GET
-// PUT
-// POST
-// DELETE
+// middlewares
+app.use(express.json());
 
-app.get("/helle", (req, res, next) => {});
-
+//connections and listeners
 app.listen(5000, () => console.log(`Server is running on Port ${5000}`));

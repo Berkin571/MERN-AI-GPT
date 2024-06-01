@@ -1,7 +1,9 @@
-import express from "express";
-const app = express();
-// middlewares
-app.use(express.json());
-//connections and listeners
-app.listen(5000, () => console.log(`Server is running on Port ${5000}`));
+import app from "./app.js";
+import { connectToDatabase } from "./database/connection.js";
+const PORT = process.env.PORT || 5005;
+connectToDatabase()
+    .then(() => {
+    app.listen(PORT, () => console.log(`Server is running on Port ${PORT} 🥡`));
+})
+    .catch((err) => console.log(err));
 //# sourceMappingURL=index.js.map

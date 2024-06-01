@@ -15,6 +15,7 @@
 /backend/yarn-error.log*
 
 # System files
+/backend/.DS_Store
 .DS_Store
 Thumbs.db
 

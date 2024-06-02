@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
+:root {
+  --primary-background: #0e0a17;
+  --white: #fff;
+}
+
 html,
 body {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
+  background: var(--primary-background);
+  color: var(--white);
 }

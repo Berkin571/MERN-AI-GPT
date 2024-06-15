@@ -18,14 +18,14 @@ export const Header = () => {
           {auth?.isLoggedIn ? (
             <>
               <NavigationLink
-                bg="#00fffc"
+                bg="#1F2937"
+                textColor="#ddd"
                 to="/chat"
                 text="Go To Chat"
-                textColor="black"
               />
               <NavigationLink
-                bg="#51538f"
-                textColor="white"
+                bg="#5b505b"
+                textColor="#ddd"
                 to="/"
                 text="logout"
                 onClick={auth.logout}
@@ -34,16 +34,16 @@ export const Header = () => {
           ) : (
             <>
               <NavigationLink
-                bg="#00fffc"
+                bg="#1F2937"
+                textColor="#ddd"
                 to="/login"
                 text="Login"
-                textColor="black"
               />
               <NavigationLink
-                bg="#51538f"
-                textColor="white"
-                to="/signup"
-                text="Signup"
+                bg="#5b505b"
+                textColor="#ddd"
+                to="/anmelden"
+                text="Anmelden"
               />
             </>
           )}

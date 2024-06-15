@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
+import Routing_Logo from "../../assets/routing_logo.webp";
 
 export const Logo = () => {
+  const logo = Routing_Logo;
   return (
     <div
       style={{
@@ -9,15 +11,17 @@ export const Logo = () => {
         marginRight: "auto",
         alignItems: "center",
         gap: "15px",
+        marginTop: "0.5rem",
       }}
     >
       <Link to={"/"}>
         <img
-          src="openai.png"
-          alt="openai"
-          width={"30px"}
-          height={"30px"}
+          src={logo}
+          alt="Logo"
+          width={"75px"}
+          height={"75px"}
           className="image-inverted"
+          style={{ borderRadius: "10px" }}
         />
       </Link>{" "}
       <Typography
@@ -28,7 +32,7 @@ export const Logo = () => {
           textShadow: "2px 2px 20px #000",
         }}
       >
-        <span style={{ fontSize: "20px" }}>MERN</span>-GPT
+        <span style={{ fontSize: "20px" }}>Truck-Routing</span>-GPT
       </Typography>
     </div>
   );

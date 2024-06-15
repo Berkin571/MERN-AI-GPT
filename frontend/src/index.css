@@ -12,4 +12,5 @@ body {
   font-optical-sizing: auto;
   background: var(--primary-background);
   color: var(--white);
+  min-height: 100vh;
 }

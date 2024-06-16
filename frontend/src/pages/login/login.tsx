@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth.context";
 import { CustomizedInput } from "../../components";
 
-export const Login = () => {
+export function Login() {
   const navigate = useNavigate();
   const auth = useAuth();
 
@@ -16,12 +16,10 @@ export const Login = () => {
     const formData = new FormData(e.currentTarget);
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
-
     try {
       toast.loading("Du wirst eingeloggt...", { id: "login" });
       await auth?.login(email, password);
       toast.success("Willkommen zurück!", { id: "login" });
-      navigate("/chat"); // Navigate after successful login
     } catch (error) {
       console.log(error);
       toast.error("Login fehlgeschlagen", { id: "login" });
@@ -30,7 +28,7 @@ export const Login = () => {
 
   useEffect(() => {
     if (auth?.user) {
-      navigate("/chat");
+      return navigate("/chat");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auth]);
@@ -95,4 +93,4 @@ export const Login = () => {
       </Box>
     </Box>
   );
-};
+}

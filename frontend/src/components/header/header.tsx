@@ -21,13 +21,13 @@ export const Header = () => {
                 bg="#1F2937"
                 textColor="#ddd"
                 to="/chat"
-                text="Go To Chat"
+                text="Zum Routenplaner"
               />
               <NavigationLink
                 bg="#5b505b"
                 textColor="#ddd"
                 to="/"
-                text="logout"
+                text="Abmelden"
                 onClick={auth.logout}
               />
             </>

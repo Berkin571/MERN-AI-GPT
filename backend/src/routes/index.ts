@@ -5,6 +5,6 @@ import chatbotRoutes from "./chatbot-routes.js";
 const router = Router();
 
 router.use("/user", userRoutes);
-router.use("/chatbot", chatbotRoutes);
+router.use("/chat", chatbotRoutes);
 
 export default router;

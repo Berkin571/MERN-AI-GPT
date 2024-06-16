@@ -1,6 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Box, Avatar, Typography, Button, IconButton } from "@mui/material";
-import red from "@mui/material/colors/red";
 
 import { IoMdSend } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
@@ -88,38 +87,43 @@ export function RoutePlanner() {
   return (
     <Box
       sx={{
-        display: "flex",
-        flex: 1,
         width: "100%",
-        height: "100%",
-        mt: 3,
-        gap: 3,
+        height: "1450px",
+        borderRadius: 3,
+        mx: "auto",
+        marginTop: "1rem",
+        display: "flex",
+        flexDirection: "row",
+        overflow: "scroll",
+        overflowX: "hidden",
+        overflowY: "auto",
+        scrollBehavior: "smooth",
       }}
     >
       <Box
         sx={{
           display: { md: "flex", xs: "none", sm: "none" },
-          flex: 0.2,
+          flex: 0.25,
           flexDirection: "column",
+          px: "1.5rem",
         }}
       >
         <Box
           sx={{
             display: "flex",
-            width: "100%",
             height: "60vh",
-            bgcolor: "rgb(17,29,39)",
+            bgcolor: "var(--secondary-background)",
             borderRadius: 5,
             flexDirection: "column",
-            mx: 3,
           }}
         >
           <Avatar
             sx={{
               mx: "auto",
               my: 2,
-              bgcolor: "white",
-              color: "black",
+              bgcolor: "var(--primary-color)",
+              color: "var(--light-text-color)",
+              border: "1px solid #ddd",
               fontWeight: 700,
             }}
           >
@@ -132,6 +136,7 @@ export function RoutePlanner() {
               my: 0,
               p: 3,
               textAlign: "center",
+              color: "var(--text-color)",
             }}
           >
             Sie sprechen mit einem speziellen Routenplanungs-ChatBOT
@@ -142,6 +147,7 @@ export function RoutePlanner() {
               my: 0,
               p: 3,
               textAlign: "center",
+              color: "var(--text-color)",
             }}
           >
             Sie können alle Informationen die zu einer effizienten Erstellung
@@ -152,13 +158,13 @@ export function RoutePlanner() {
             sx={{
               width: "200px",
               my: "auto",
-              color: "white",
+              color: "var(--light-text-color)",
               fontWeight: "700",
               borderRadius: 3,
               mx: "auto",
-              bgcolor: red[300],
+              bgcolor: "var(--primary-color)",
               ":hover": {
-                bgcolor: red.A400,
+                bgcolor: "var(--secondary-color)",
               },
             }}
           >
@@ -169,15 +175,19 @@ export function RoutePlanner() {
       <Box
         sx={{
           display: "flex",
+          height: "585px",
           flex: { md: 0.8, xs: 1, sm: 1 },
           flexDirection: "column",
-          px: 3,
+          px: "1.75rem",
+          overflow: "scroll",
+          overflowX: "hidden",
+          overflowY: "auto",
+          scrollBehavior: "smooth",
         }}
       >
         <Box
           sx={{
             width: "100%",
-            height: "60vh",
             borderRadius: 3,
             mx: "auto",
             display: "flex",
@@ -196,7 +206,8 @@ export function RoutePlanner() {
           style={{
             width: "100%",
             borderRadius: 8,
-            backgroundColor: "rgb(17,27,39)",
+            backgroundColor: "var(--secondary-background)",
+            border: "1px solid var(--border-color)",
             display: "flex",
             margin: "auto",
           }}
@@ -206,16 +217,20 @@ export function RoutePlanner() {
             type="text"
             style={{
               width: "100%",
+              marginTop: "auto",
               backgroundColor: "transparent",
               padding: "30px",
               border: "none",
               outline: "none",
-              color: "white",
+              color: "var(--primary-color)",
               fontSize: "20px",
             }}
           />
-          <IconButton onClick={handleSubmit} sx={{ color: "white", mx: 1 }}>
-            <IoMdSend />
+          <IconButton
+            onClick={handleSubmit}
+            sx={{ color: "var(--primary-color)", mx: 1 }}
+          >
+            <IoMdSend color="var(--primary-color)" />
           </IconButton>
         </div>
       </Box>

@@ -10,22 +10,26 @@ export const Header = () => {
 
   return (
     <AppBar
-      sx={{ bgcolor: "transparent", position: "static", boxShadow: "none" }}
+      sx={{
+        bgcolor: "var(--primary-background)",
+        position: "static",
+        boxShadow: "none",
+      }}
     >
-      <Toolbar sx={{ display: "flex" }}>
+      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         <Logo />
         <div>
           {auth?.isLoggedIn ? (
             <>
               <NavigationLink
-                bg="#1F2937"
-                textColor="#ddd"
+                bg="var(--btn-bg)"
+                textColor="var(--light-text-color)"
                 to="/chat"
                 text="Zum Routenplaner"
               />
               <NavigationLink
-                bg="#5b505b"
-                textColor="#ddd"
+                bg="var(--btn-bg)"
+                textColor="var(--light-text-color)"
                 to="/"
                 text="Abmelden"
                 onClick={auth.logout}
@@ -34,14 +38,14 @@ export const Header = () => {
           ) : (
             <>
               <NavigationLink
-                bg="#1F2937"
-                textColor="#ddd"
+                bg="var(--btn-bg)"
+                textColor="var(--light-text-color)"
                 to="/login"
                 text="Login"
               />
               <NavigationLink
-                bg="#5b505b"
-                textColor="#ddd"
+                bg="var(--btn-bg)"
+                textColor="var(--light-text-color)"
                 to="/anmelden"
                 text="Anmelden"
               />

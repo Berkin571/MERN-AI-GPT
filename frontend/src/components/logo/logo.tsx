@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
-import Routing_Logo from "../../assets/routing_logo.webp";
+import Routing_Logo from "../../assets/logo-2.webp";
 
 export const Logo = () => {
   const logo = Routing_Logo;
@@ -29,7 +29,7 @@ export const Logo = () => {
           display: { md: "block", sm: "none", xs: "none" },
           mr: "auto",
           fontWeight: "800",
-          textShadow: "2px 2px 20px #000",
+          color: "var(--text-color)",
         }}
       >
         <span style={{ fontSize: "20px" }}>Truck-Routing</span>-GPT

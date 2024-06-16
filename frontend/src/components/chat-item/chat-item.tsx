@@ -44,18 +44,18 @@ export const ChatItem = ({
       sx={{
         display: "flex",
         p: 2,
-        bgcolor: "#1F2937",
+        bgcolor: "var(--primary-background)",
         gap: 2,
         my: 0.5,
         borderRadius: 2,
       }}
     >
-      <Avatar sx={{ ml: "0" }}>
-        <img src="openai.png" alt="openai" width={"30px"} />
-      </Avatar>
+      <Avatar sx={{ ml: "0" }}>AI</Avatar>
       <Box>
         {!messageBlocks ? (
-          <Typography sx={{ fontSize: "20px" }}>{content}</Typography>
+          <Typography sx={{ fontSize: "20px", color: "var(--text-color)" }}>
+            {content}
+          </Typography>
         ) : (
           messageBlocks.map((block, index) =>
             isCodeBlock(block) ? (
@@ -67,7 +67,10 @@ export const ChatItem = ({
                 {block}
               </SyntaxHighlighter>
             ) : (
-              <Typography key={index} sx={{ fontSize: "20px" }}>
+              <Typography
+                key={index}
+                sx={{ fontSize: "20px", color: "var(--text-color)" }}
+              >
                 {block}
               </Typography>
             )
@@ -80,18 +83,26 @@ export const ChatItem = ({
       sx={{
         display: "flex",
         p: 2,
-        bgcolor: "#5b505b",
+        bgcolor: "var(--secondary-background)",
         gap: 2,
         my: 0.5,
         borderRadius: 2,
       }}
     >
-      <Avatar sx={{ ml: "0", bgcolor: "black", color: "white" }}>
+      <Avatar
+        sx={{
+          ml: "0",
+          bgcolor: "var(--primary-color)",
+          color: "var(--light-text-color)",
+        }}
+      >
         {userInitials}
       </Avatar>
       <Box>
         {!messageBlocks ? (
-          <Typography sx={{ fontSize: "20px" }}>{content}</Typography>
+          <Typography sx={{ fontSize: "20px", color: "var(--text-color)" }}>
+            {content}
+          </Typography>
         ) : (
           messageBlocks.map((block, index) =>
             isCodeBlock(block) ? (
@@ -103,7 +114,10 @@ export const ChatItem = ({
                 {block}
               </SyntaxHighlighter>
             ) : (
-              <Typography key={index} sx={{ fontSize: "20px" }}>
+              <Typography
+                key={index}
+                sx={{ fontSize: "20px", color: "var(--text-color)" }}
+              >
                 {block}
               </Typography>
             )

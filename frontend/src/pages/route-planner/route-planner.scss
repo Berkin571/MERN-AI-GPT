@@ -1,0 +1,93 @@
+.route-planner {
+  width: 100%;
+  height: calc(100vh - 110px);
+  border-radius: 10px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #f0f4f8;
+}
+
+.open-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #003f83;
+  }
+}
+
+.sidebar-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-text {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  color: #333333;
+}
+
+.chat {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #f0f4f8;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  color: #333333;
+  font-size: 1rem;
+}
+
+.send-button {
+  color: #007bff;
+  padding: 0.5rem;
+}
